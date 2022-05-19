@@ -1,0 +1,26 @@
+﻿@using HW_11.Models.Entity
+@model Customer
+
+<div class="card">
+  <h5 class="card-header">جزئیات مشتری @Model.Name</h5>
+  <div class="card-body">
+   
+    <div>
+        <label for="ID" class="col-sm-2 col-form-label">شناسه مشتری</label>   
+        <input type="text" class="form-control"  asp-for="ID" readonly="readonly">
+    </div>
+    <div>
+
+        <label asp-for="Name" class="col-sm-2 col-form-label">نام مشتری</label>  
+        <input type="text" class="form-control" asp-for="Name" readonly="readonly">
+    </div>
+    <div>
+         <label asp-for="Tel" class="col-sm-2 col-form-label">تلفن مشتری</label>  
+         <input type="text" class="form-control" asp-for="Tel" readonly="readonly">
+    </div>
+    
+         <a class="btn btn-primary" asp-area="" asp-controller="Store"asp-action="index">بازگشت به لیست</a>
+    </div>
+  </div>
+</div>
+

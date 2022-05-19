@@ -1,0 +1,26 @@
+﻿@using HW_11.Models.Entity
+@model Seller
+
+<div class="card">
+  <h5 class="card-header">جزئیات فروشنده @Model.Name</h5>
+  <div class="card-body">
+   
+    <div>
+        <label for="ID" class="col-sm-2 col-form-label">شناسه فروشنده</label>   
+        <input type="text" class="form-control"  asp-for="ID" readonly="readonly">
+    </div>
+    <div>
+
+        <label asp-for="Name" class="col-sm-2 col-form-label">نام فروشنده</label>  
+        <input type="text" class="form-control" asp-for="Name" readonly="readonly">
+    </div>
+    <div>
+         <label asp-for="S_Adderss" class="col-sm-2 col-form-label">آدرس فروشنده</label>  
+         <input type="text" class="form-control" asp-for="S_Adderss" readonly="readonly">
+    </div>
+    
+         <a class="btn btn-primary" asp-area="" asp-controller="Store"asp-action="index">بازگشت به لیست</a>
+    </div>
+  </div>
+</div>
+

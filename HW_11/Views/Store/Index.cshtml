@@ -1,0 +1,32 @@
+﻿@using HW_11.Models.Entity
+@model List<FactoQueryModel>
+
+<table class="table table-hover bg-danger">
+     <tr>
+        <th>شماره فاکتور</th>
+        <th>نام فروشنده</th>
+        <th>آدرس فروشنده</th>
+        <th>نام تولید کننده</th>
+        <th>آدرس تولید کننده</th>
+        <th>نام مشتری</th>
+        <th>شماره تلفن مشتری</th>
+        
+    </tr>
+
+    @foreach(var item in Model)
+{       
+    <tr>
+        <th>@item.NumFactor</th>
+        <th><a class="link-primary" asp-controller="Store"asp-action="SellerDetail"asp-route-id="@item.NumFactor">@item.NameSeller</a> </th> 
+        <th>@item.AdressSeller</th>
+        <th><a class="link-warning" asp-controller="Store"asp-action="ProducterDetail"asp-route-id="@item.NumFactor">@item.NameProducter</a></th>
+        <th>@item.adressProducter</th>
+        <th><a class="link-info" asp-controller="Store"asp-action="CustomerrDetail"asp-route-id="@item.NumFactor">@item.NameCustomer</a></th>
+        <th>@item.TelCustomer</th>
+        <th>
+        </th>
+    </tr>
+}
+</table>
+
+
